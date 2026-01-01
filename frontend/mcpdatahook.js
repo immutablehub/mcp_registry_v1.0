@@ -31,7 +31,7 @@ export function useMpcData() {
 
       //  Always revalidate in background
       try {
-        const res = await fetch(`/api/mpc`);
+        const res = await fetch(`/api/mcpfetch`);
         const json = await res.json();
         const freshUploads = Array.isArray(json.uploads) ? json.uploads : [];
 
